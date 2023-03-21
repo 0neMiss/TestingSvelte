@@ -1,41 +1,19 @@
 <script>
-	export let  firstName = 'Jordan';
-	export let lastName = 'Shehane';
-	export let color = 'blue'
-	export let showText = true
-	export let users = [
+	import FeedbackList from "./components/FeedbackList.svelte"
+	export let feedback = [
 		{
 			id: 1,
-			name: 'Ellie'
+			rating: 9,
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		},
 		{
 			id: 2,
-			name: 'Wen Wen'
-		},
-		{
-			id: 3,
-			name: 'Jordan'
-		},
-
+			rating: 10, 
+			text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		}
 	]
-	$: name = firstName + ' ' + lastName 
-	const togggle = ()=>{
-		color = color === 'blue' ? 'red' : 'blue'	
-		showText = !showText
-		users = [...users, {}]
-	}
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<FeedbackList {feedback}></FeedbackList>
 </main>
-
-<style>
-
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
