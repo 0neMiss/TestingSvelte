@@ -3,5 +3,7 @@
     export let item;
 </script>
 <Card>
-  hello there!!!
+    {item.id}
+    {item.text}
+    {item.rating}
 </Card>
